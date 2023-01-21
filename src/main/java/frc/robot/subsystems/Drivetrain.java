@@ -38,7 +38,7 @@ public class Drivetrain extends SubsystemBase {
 
     public void setPower(double front, double back) {
       lead.set(ControlMode.PercentOutput, front);
-      lead.set(ControlMode.PercentOutput, back);
+      follower.set(ControlMode.PercentOutput, back);
     }
   }
 
