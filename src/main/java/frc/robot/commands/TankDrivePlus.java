@@ -35,10 +35,10 @@ public class TankDrivePlus extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    // drivetrain.setLeftPower((controller.getRightStickY() - controller.getRightStickX()) * 0.35);
-    // drivetrain.setRightPower((controller.getRightStickY() + controller.getRightStickX()) * 0.35);
-    drivetrain.setLeftPower((controller.getLeftStickY()));
-    drivetrain.setRightPower((controller.getRightStickY()));
+    drivetrain.setLeftPower((controller.getRightStickY() - controller.getRightStickX()) * 0.35);
+    drivetrain.setRightPower((controller.getRightStickY() + controller.getRightStickX()) * 0.35);
+    // drivetrain.setLeftPower((controller.getLeftStickY()));
+    // drivetrain.setRightPower((controller.getRightStickY()));
     intake.setPower(controller.getLeftTriggerAxis());
     shooter.setPower(controller.getLeftTriggerAxis());
     double right = controller.getRightTriggerAxis();
