@@ -28,6 +28,7 @@ public class Xbox extends XboxController {
     public static final int LEFT_AXIS_Y = 1;
     public static final int RIGHT_AXIS_Y = 5;
 
+    public static final int LEFT_AXIS_X = 0;
     public static final int RIGHT_AXIS_X = 4;
 
     public static final int LEFT_AXIS_TRIGGER = 2;
@@ -97,6 +98,13 @@ public class Xbox extends XboxController {
     /**
      * @return a double from -1 to 1 of the vertical angle of the left joystick
      */
+    public double getLeftStickX() {
+        return getRawAxis(LEFT_AXIS_X) * AXIS_INVERSIONS[LEFT_AXIS_X];
+    }
+
+    /**
+     * @return a double from -1 to 1 of the vertical angle of the left joystick
+     */
     public double getLeftStickY() {
         return getRawAxis(LEFT_AXIS_Y) * AXIS_INVERSIONS[LEFT_AXIS_Y];
     }
@@ -107,7 +115,7 @@ public class Xbox extends XboxController {
     public double getRightStickY() {
         return getRawAxis(RIGHT_AXIS_Y) * AXIS_INVERSIONS[RIGHT_AXIS_Y];
     }
-
+    
     public double getRightStickX() {
         return getRawAxis(RIGHT_AXIS_X) * AXIS_INVERSIONS[RIGHT_AXIS_X];
     }
