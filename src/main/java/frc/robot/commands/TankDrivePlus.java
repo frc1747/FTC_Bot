@@ -5,6 +5,7 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.XboxController;
+import frc.robot.Constants;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.Drivetrain;
 import frc.robot.subsystems.Intake;
@@ -35,8 +36,8 @@ public class TankDrivePlus extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    drivetrain.setLeftPower((controller.getRightStickY() - controller.getRightStickX()) * 0.35);
-    drivetrain.setRightPower((controller.getRightStickY() + controller.getRightStickX()) * 0.35);
+    drivetrain.setLeftPower((controller.getRightStickY() - controller.getRightStickX()) * Constants.drivetrainSpeed);
+    drivetrain.setRightPower((controller.getRightStickY() + controller.getRightStickX()) * Constants.drivetrainSpeed);
     // drivetrain.setLeftPower((controller.getLeftStickY()));
     // drivetrain.setRightPower((controller.getRightStickY()));
     intake.setPower(controller.getLeftTriggerAxis());

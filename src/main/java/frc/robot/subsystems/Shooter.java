@@ -5,6 +5,7 @@
 package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
+import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
@@ -19,6 +20,8 @@ public class Shooter extends SubsystemBase {
   public Shooter() {
     this.l_shoot = new TalonSRX(Constants.LEFT_SHOOTER);
     this.r_shoot = new TalonSRX(Constants.RIGHT_SHOOTER);
+    this.l_shoot.setNeutralMode(NeutralMode.Brake);
+    this.r_shoot.setNeutralMode(NeutralMode.Brake);
   }
 
   public void setPower(double power) {

@@ -7,6 +7,8 @@ package frc.robot;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
+import frc.robot.commands.AddFiveDrivetrain;
+import frc.robot.commands.TakeFiveDrivetrain;
 import frc.robot.commands.TankDrive;
 import frc.robot.commands.TankDrivePlus;
 import frc.robot.subsystems.Drivetrain;
@@ -42,6 +44,11 @@ public class RobotContainer {
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
+    controller.getButton(Xbox.A)
+    .whenPressed(new AddFiveDrivetrain());
+
+    controller.getButton(Xbox.B)
+    .whenPressed(new TakeFiveDrivetrain());
   }
 
   /**
