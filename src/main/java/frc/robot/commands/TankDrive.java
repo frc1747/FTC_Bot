@@ -5,11 +5,11 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.XboxController;
-import edu.wpi.first.wpilibj2.command.CommandBase;
+import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.subsystems.Drivetrain;
 import frc.robot.subsystems.Xbox;
 
-public class TankDrive extends CommandBase {
+public class TankDrive extends Command {
   private Drivetrain drivetrain;
   private Xbox controller;
   /** Creates a new TankDrive. */

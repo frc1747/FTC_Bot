@@ -4,9 +4,7 @@
 
 package frc.robot.subsystems;
 
-import edu.wpi.first.wpilibj.BuiltInAccelerometer;
 import edu.wpi.first.wpilibj.XboxController;
-import edu.wpi.first.wpilibj.interfaces.Accelerometer;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 
 /** Add your docs here. */

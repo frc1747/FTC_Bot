@@ -45,10 +45,10 @@ public class RobotContainer {
    */
   private void configureButtonBindings() {
     controller.getButton(Xbox.A)
-    .whenPressed(new AddFiveDrivetrain());
+      .onTrue(new AddFiveDrivetrain());
 
     controller.getButton(Xbox.B)
-    .whenPressed(new TakeFiveDrivetrain());
+      .onTrue(new TakeFiveDrivetrain());
   }
 
   /**

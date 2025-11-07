@@ -4,10 +4,10 @@
 
 package frc.robot.commands;
 
-import edu.wpi.first.wpilibj2.command.CommandBase;
+import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.Constants;
 
-public class AddFiveDrivetrain extends CommandBase {
+public class AddFiveDrivetrain extends Command {
   /** Creates a new AddFiveDrivetrain. */
   public AddFiveDrivetrain() {
     // Use addRequirements() here to declare subsystem dependencies.
